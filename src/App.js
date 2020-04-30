@@ -27,7 +27,7 @@ render(){
   return (
     <div className="App container">
       <Header/>
-      <ul className="list-group card">
+       <ul className="list-group card">
         {this.state.books.map((book,index)=>{
          return(<Books title={book.volumeInfo.title}  description={book.volumeInfo.description} imageUrl={book.volumeInfo.imageLinks.smallThumbnail} />)  
         })} 

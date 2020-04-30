@@ -2,7 +2,7 @@ import React from 'react';
 
 function Books(props) {
     return (
-        <div>
+        <div >
           <li className="card-body list-group-item">
           <img src={props.imageUrl} className="img-fluid list-group-item" alt="Responsive image"/>
           <a href={"/"} className="list-group-item list-group-item-action flex-column align-items-center">
