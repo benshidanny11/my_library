@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   target: 'web',
   devtool: 'cheap-module-source-map',
-  entry: './src/index',
+  entry: './public/index',
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
@@ -28,7 +28,7 @@ module.exports = {
     new Dotenv(),
     new HtmlWebpackPlugin({
       favicon: 'src/favicon.ico',
-      template: 'public/index.html',
+      template: 'src/index.html',
     }),
     new ErrorOverlayPlugin(),
   ],
@@ -41,7 +41,7 @@ module.exports = {
       },
       {
         test: /.(css|scss)$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /.(jpg|jpeg|png|gif|svg)$/,
