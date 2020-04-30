@@ -18,7 +18,7 @@ class App extends React.Component{
         books:Response.data.items
       }
     )
-    console.log(Response.data.items[0].volumeInfo.authors[0]);
+    console.log(Response.data.items[0].volumeInfo);
      
   })
 
@@ -29,7 +29,7 @@ render(){
       <Header/>
        <ul className="list-group card">
         {this.state.books.map((book,index)=>{
-         return(<Books title={book.volumeInfo.title}  description={book.volumeInfo.description} imageUrl={book.volumeInfo.imageLinks.smallThumbnail} />)  
+         return(<Books title={book.volumeInfo.title}  description={book.volumeInfo.description} imageUrl={book.volumeInfo.imageLinks.smallThumbnail} bookid/>)  
         })} 
      
       </ul>
