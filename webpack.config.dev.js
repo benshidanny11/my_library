@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   target: 'web',
   devtool: 'cheap-module-source-map',
-  entry: './public/index',
+  entry: './src/index',
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/',
